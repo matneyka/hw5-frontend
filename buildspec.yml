@@ -14,7 +14,7 @@ phases:
     post_build:
          commands:
             - echo Deploying production files to S3 web hosting bucket
-            - aws s3 sync --delete dist/km-hw5-frontend s3://km-hw5-frontend
+            - aws s3 sync --delete dist s3://km-hw5-frontend
             - echo Build completed on `date`
 artifacts:
     files:
